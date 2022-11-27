@@ -79,23 +79,23 @@ CREATE TABLE Player (
 -- Create Roster table
 CREATE TABLE Roster (
     team VARCHAR(20),
-    player INT,
+    player_id INT,
 
-    PRIMARY KEY (team, player),
+    PRIMARY KEY (team, player_id),
     FOREIGN KEY (team)
         REFERENCES Team(name),
-    FOREIGN KEY (player)
+    FOREIGN KEY (player_id)
         REFERENCES Player(player_id)
 );
 
 -- Create Watchlist table
 CREATE TABLE Watchlist (
     user VARCHAR(20),
-    player INT,
+    player_id INT,
 
-    PRIMARY KEY (user, player),
+    PRIMARY KEY (user, player_id),
     FOREIGN KEY (user)
         REFERENCES User(user_name),
-    FOREIGN KEY (player)
+    FOREIGN KEY (player_id)
         REFERENCES Player(player_id)
 );
