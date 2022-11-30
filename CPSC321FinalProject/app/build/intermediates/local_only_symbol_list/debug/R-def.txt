@@ -1,0 +1,32 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color grey_back
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable app_logo
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id login_button
+id logoImage
+id message_user
+id password_input
+id password_text
+id username_input
+id username_text
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string login_string
+string message_text
+string password_text
+string username_hint
+string username_text
+style Theme.CPSC321FinalProject
+xml backup_rules
+xml data_extraction_rules

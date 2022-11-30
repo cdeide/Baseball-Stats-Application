@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CPSC321 - Final Project</string>
+    <string name="username_hint">Username</string>
+    <string name="username_text">Username:</string>
+    <string name="login_string">LOGIN/REGISTER</string>
+    <string name="password_text">Password:</string>
+    <string name="message_text">Welcome!\n\nEnter your username and password to login or register</string>
 </resources>
