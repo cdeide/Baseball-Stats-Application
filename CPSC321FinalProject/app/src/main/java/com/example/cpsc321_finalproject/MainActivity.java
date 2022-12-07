@@ -48,29 +48,26 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view){
                 // Connect to the database
+                // AsynkTask Approach
+                DBConnector connector = new DBConnector();
+                connector.execute();
+
+                // Thread Executor Approach
+                ExecutorImp connect = new ExecutorImp();
+
                 try {
-                    DBConnector connector = new DBConnector();
-                    connector.execute();
-
-//                    ExecutorImp connect = new ExecutorImp();
-//                    try {
-//                        connect.execute(new NewThread());
-//                    } catch (RejectedExecutionException e) {
-//                        Log.println(Log.DEBUG, TAG, "Rejected");
-//                        Log.println(Log.DEBUG, TAG, String.valueOf(e.getCause()));
-//                    }
-                    Log.println(Log.DEBUG, TAG, "SUCCESS");
-
-                    // TODO: Check for credentials match with query
-                    // Launch the MainMenu Activity if credentials match or new user
-                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                    startActivity(intent);
-                } catch (Exception e) {
-                    Log.println(Log.DEBUG, TAG, "FAILED");
-                    Log.println(Log.DEBUG, TAG, e.toString());
+                    connect.execute(new NewThread());
+                } catch (RejectedExecutionException e) {
+                    Log.println(Log.DEBUG, TAG, "Rejected");
                     Log.println(Log.DEBUG, TAG, String.valueOf(e.getCause()));
-                    Log.println(Log.DEBUG, TAG, e.getMessage());
                 }
+
+                Log.println(Log.DEBUG, TAG, "SUCCESS");
+
+                // TODO: Check for credentials match with query
+                // Launch the MainMenu Activity if credentials match or new user
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
 
