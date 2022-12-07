@@ -8,13 +8,30 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
+    <dimen name="fab_margin">16dp</dimen>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
     <string name="app_name">CPSC321 - Final Project</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="login_failed">"Login failed"</string>
     <string name="login_string">LOGIN/REGISTER</string>
     <string name="message_text">Welcome!\n\nEnter your username and password to login or register</string>
+    <string name="next">Next</string>
     <string name="password_text">Password:</string>
+    <string name="previous">Previous</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
     <string name="username_hint">Username</string>
     <string name="username_text">Username:</string>
-    <style name="Theme.CPSC321FinalProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <string name="welcome">"Welcome !"</string>
+    <style name="Theme.CPSC321FinalProject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -27,4 +44,10 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         
     </style>
+    <style name="Theme.CPSC321FinalProject.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.CPSC321FinalProject.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.CPSC321FinalProject.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 </resources>

@@ -23,6 +23,19 @@
         android:testOnly="true"
         android:theme="@style/Theme.CPSC321FinalProject" >
         <activity
+            android:name="com.example.cpsc321_finalproject.HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.CPSC321FinalProject.NoActionBar" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.cpsc321_finalproject.ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
             android:name="com.example.cpsc321_finalproject.MainActivity"
             android:exported="true" >
             <intent-filter>
@@ -47,6 +60,13 @@
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
     </application>
 
 </manifest>
