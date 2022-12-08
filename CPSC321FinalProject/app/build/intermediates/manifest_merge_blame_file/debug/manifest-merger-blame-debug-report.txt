@@ -6,120 +6,120 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml
+8-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml
+9-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:5:22-64
 12
 13    <application
-13-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:7:5-43:19
+13-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:7:5-43:19
 14        android:allowBackup="true"
-14-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:8:9-35
+14-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.8.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\87a796fe63836d99a2198ac6a6284cb3\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+15-->[androidx.core:core:1.8.0] C:\Users\con_e\.gradle\caches\transforms-3\87a796fe63836d99a2198ac6a6284cb3\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 16        android:dataExtractionRules="@xml/data_extraction_rules"
-16-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:9:9-65
+16-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:9:9-65
 17        android:debuggable="true"
 18        android:fullBackupContent="@xml/backup_rules"
-18-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:10:9-54
+18-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:10:9-54
 19        android:icon="@mipmap/ic_launcher"
-19-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:11:9-43
+19-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:11:9-43
 20        android:label="@string/app_name"
-20-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:12:9-41
+20-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:12:9-41
 21        android:roundIcon="@mipmap/ic_launcher_round"
-21-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:13:9-54
+21-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:13:9-54
 22        android:supportsRtl="true"
-22-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:14:9-35
+22-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:14:9-35
 23        android:testOnly="true"
 24        android:theme="@style/Theme.CPSC321FinalProject" >
-24-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:15:9-57
+24-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:15:9-57
 25        <activity
-25-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:17:9-25:20
+25-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:17:9-25:20
 26            android:name="com.example.cpsc321_finalproject.HomeActivity"
-26-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:18:13-41
+26-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:18:13-41
 27            android:exported="false"
-27-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:19:13-37
+27-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:19:13-37
 28            android:label="@string/title_activity_home"
-28-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:20:13-56
+28-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:20:13-56
 29            android:theme="@style/Theme.CPSC321FinalProject.NoActionBar" >
-29-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:21:13-73
+29-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:21:13-73
 30            <meta-data
-30-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:22:13-24:36
+30-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:22:13-24:36
 31                android:name="android.app.lib_name"
-31-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:23:17-52
+31-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:23:17-52
 32                android:value="" />
-32-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:24:17-33
+32-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:24:17-33
 33        </activity>
 34        <activity
-34-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:26:9-29:60
+34-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:26:9-29:60
 35            android:name="com.example.cpsc321_finalproject.ui.login.LoginActivity"
-35-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:27:13-51
+35-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:27:13-51
 36            android:exported="false"
-36-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:28:13-37
+36-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:28:13-37
 37            android:label="@string/title_activity_login" />
-37-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:29:13-57
+37-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:29:13-57
 38        <activity
-38-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:30:9-42:20
+38-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:30:9-42:20
 39            android:name="com.example.cpsc321_finalproject.MainActivity"
-39-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:31:13-41
+39-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:31:13-41
 40            android:exported="true" >
-40-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:32:13-36
+40-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:32:13-36
 41            <intent-filter>
-41-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:33:13-37:29
+41-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:33:13-37:29
 42                <action android:name="android.intent.action.MAIN" />
-42-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:34:17-69
-42-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:34:25-66
+42-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:34:17-69
+42-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:34:25-66
 43
 44                <category android:name="android.intent.category.LAUNCHER" />
-44-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:36:17-77
-44-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:36:27-74
+44-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:36:17-77
+44-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:36:27-74
 45            </intent-filter>
 46
 47            <meta-data
-47-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:22:13-24:36
+47-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:22:13-24:36
 48                android:name="android.app.lib_name"
-48-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:23:17-52
+48-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:23:17-52
 49                android:value="" />
-49-->C:\Users\Connor Deide\Documents\Zaga CPSC\CPSC 321\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:24:17-33
+49-->C:\Users\con_e\AndroidStudioProjects\project-cdeide\CPSC321FinalProject\app\src\main\AndroidManifest.xml:24:17-33
 50        </activity>
 51
 52        <provider
-52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\con_e\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 53            android:name="androidx.startup.InitializationProvider"
-53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\con_e\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
 54            android:authorities="com.example.cpsc321_finalproject.androidx-startup"
-54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\con_e\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
 55            android:exported="false" >
-55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\con_e\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 56            <meta-data
-56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\con_e\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 57                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\con_e\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 58                android:value="androidx.startup" />
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\con_e\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 59            <meta-data
-59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Connor Deide\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\con_e\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 60                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Connor Deide\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\con_e\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 61                android:value="androidx.startup" />
-61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Connor Deide\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\con_e\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 62        </provider>
 63
 64        <uses-library
-64-->[androidx.window:window:1.0.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+64-->[androidx.window:window:1.0.0] C:\Users\con_e\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
 65            android:name="androidx.window.extensions"
-65-->[androidx.window:window:1.0.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+65-->[androidx.window:window:1.0.0] C:\Users\con_e\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
 66            android:required="false" />
-66-->[androidx.window:window:1.0.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+66-->[androidx.window:window:1.0.0] C:\Users\con_e\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
 67        <uses-library
-67-->[androidx.window:window:1.0.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+67-->[androidx.window:window:1.0.0] C:\Users\con_e\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
 68            android:name="androidx.window.sidecar"
-68-->[androidx.window:window:1.0.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+68-->[androidx.window:window:1.0.0] C:\Users\con_e\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
 69            android:required="false" />
-69-->[androidx.window:window:1.0.0] C:\Users\Connor Deide\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+69-->[androidx.window:window:1.0.0] C:\Users\con_e\.gradle\caches\transforms-3\073f10b23065a04cd4c659168bad23fb\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
 70    </application>
 71
 72</manifest>

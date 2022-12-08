@@ -1,14 +1,14 @@
-#Tue Dec 06 22:43:46 PST 2022
-path.4=10/classes.dex
-path.3=classes2.dex
-path.2=7/classes.dex
+#Wed Dec 07 14:56:26 PST 2022
+path.4=classes2.dex
+path.3=7/classes.dex
+path.2=10/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.4=C\:\\Users\\Connor Deide\\Documents\\Zaga CPSC\\CPSC 321\\project-cdeide\\CPSC321FinalProject\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
-base.3=C\:\\Users\\Connor Deide\\Documents\\Zaga CPSC\\CPSC 321\\project-cdeide\\CPSC321FinalProject\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.2=C\:\\Users\\Connor Deide\\Documents\\Zaga CPSC\\CPSC 321\\project-cdeide\\CPSC321FinalProject\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.1=C\:\\Users\\Connor Deide\\Documents\\Zaga CPSC\\CPSC 321\\project-cdeide\\CPSC321FinalProject\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=C\:\\Users\\Connor Deide\\Documents\\Zaga CPSC\\CPSC 321\\project-cdeide\\CPSC321FinalProject\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.4=C\:\\Users\\con_e\\AndroidStudioProjects\\project-cdeide\\CPSC321FinalProject\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.3=C\:\\Users\\con_e\\AndroidStudioProjects\\project-cdeide\\CPSC321FinalProject\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.2=C\:\\Users\\con_e\\AndroidStudioProjects\\project-cdeide\\CPSC321FinalProject\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+base.1=C\:\\Users\\con_e\\AndroidStudioProjects\\project-cdeide\\CPSC321FinalProject\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=C\:\\Users\\con_e\\AndroidStudioProjects\\project-cdeide\\CPSC321FinalProject\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex

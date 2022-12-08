@@ -53,14 +53,14 @@ public class MainActivity extends AppCompatActivity{
                 connector.execute();
 
                 // Thread Executor Approach
-                ExecutorImp connect = new ExecutorImp();
+                //ExecutorImp connect = new ExecutorImp();
 
-                try {
-                    connect.execute(new NewThread());
-                } catch (RejectedExecutionException e) {
-                    Log.println(Log.DEBUG, TAG, "Rejected");
-                    Log.println(Log.DEBUG, TAG, String.valueOf(e.getCause()));
-                }
+//                try {
+//                    connect.execute(new NewThread());
+//                } catch (RejectedExecutionException e) {
+//                    Log.println(Log.DEBUG, TAG, "Rejected");
+//                    Log.println(Log.DEBUG, TAG, String.valueOf(e.getCause()));
+//                }
 
                 Log.println(Log.DEBUG, TAG, "SUCCESS");
 
