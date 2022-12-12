@@ -36,7 +36,7 @@ CREATE TABLE Team (
 CREATE TABLE User (
     user_name VARCHAR(20),
     password VARCHAR(20) NOT NULL,
-    fav_team VARCHAR(20) NOT NULL,
+    fav_team VARCHAR(20),
 
     PRIMARY KEY (user_name),
     FOREIGN KEY (fav_team)
