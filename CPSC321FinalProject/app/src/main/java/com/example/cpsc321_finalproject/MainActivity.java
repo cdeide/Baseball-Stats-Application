@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -16,20 +17,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.sql.*;
+import java.util.concurrent.ExecutionException;
 
 /**
  * This activity is the first to load on the launch of this application. It is a simple user
  * login/registration page.
  */
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     static final String TAG = "MainActivity";
 
     AppUtils utils = new AppUtils();
-
-    String url = Credentials.HOST;
-    String db_user = Credentials.USER;
-    String db_password = Credentials.PASSWORD;
+    Intent intent = null;
 
     EditText username = null;
     EditText user_password = null;
@@ -56,6 +55,9 @@ public class MainActivity extends AppCompatActivity{
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view){
+//                //Temporary bypass
+//                Intent intent = new Intent(MainActivity.this, PickTeamActivity.class);
+//                startActivity(intent);
 
                 // Check for valid input fields
                 if(username.getText().toString().equals("") || user_password.getText().toString().equals("")) {
@@ -84,7 +86,9 @@ public class MainActivity extends AppCompatActivity{
                     credentialStatus = checkCredentials.execute().get();
                     Log.println(Log.DEBUG, TAG, String.valueOf(credentialStatus));
                     if(credentialStatus == 0) {
-                        // username is a match, now check for password
+                        // Credentials are a match, launch the HomeActivity
+                        intent = new Intent(MainActivity.this, HomeActivity.class);
+                        startActivity(intent);
                     }
                     else if(credentialStatus == 1) {
                         Log.println(Log.DEBUG, TAG, "ENTERED");
@@ -97,20 +101,37 @@ public class MainActivity extends AppCompatActivity{
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         // Add user to the Database and launch the HomeActivity
-
+                                        AddUserTask addUser = new AddUserTask();
+                                        try {
+                                            addUser.execute();
+                                            // If user is successfully added, launch the PickTeamActivity
+                                            Intent intent = new Intent(MainActivity.this, PickTeamActivity.class);
+                                            intent.putExtra("username", username.getText().toString());
+                                            startActivity(intent);
+                                        } catch (Exception e) {
+                                            message_user.setTextColor(getResources().getColor(R.color.red));
+                                            message_user.setTypeface(null, Typeface.BOLD);
+                                            message_user.setTextSize(18);
+                                            message_user.setText("There was a problem connecting to the Database");
+                                            e.printStackTrace();
+                                        }
                                     }
                                 })
                                 .setNegativeButton("Cancel", null);
                         dialogBuilder.show();
                     }
+                    else if(credentialStatus == 2) {
+                        // Password does not match a valid user's password, message the user for
+                        // an incorrect password
+                        message_user.setTextColor(getResources().getColor(R.color.red));
+                        message_user.setTypeface(null, Typeface.BOLD);
+                        message_user.setTextSize(18);
+                        message_user.setText("Incorrect Password: \n" +
+                                "The password input does not match the password for this username");
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
-                // TODO: Check for credentials match with query
-                // Launch the MainMenu Activity if credentials match or new user
-//                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-//                startActivity(intent);
             }
         });
 
@@ -136,45 +157,65 @@ public class MainActivity extends AppCompatActivity{
                         break;
                     }
                 }
-                // Close connection
-                cn.close();
-                st.close();
-                rs.close();
+                if(userMatch) {
+                    // Check that input password matches password on file
+                    query = "SELECT password FROM User WHERE user_name=" + "'" + username.getText().toString() + "'";
+                    Log.println(Log.DEBUG, TAG, query);
+                    rs = st.executeQuery(query);
+                    while(rs.next()) {
+                        if (utils.hashPassword(user_password.getText().toString()).equals(rs.getString("password"))) {
+                            // Matching password, return credentialStatus = 0
+                            // Denotes valid credentials
+                            cn.close();
+                            return 0;
+                        }
+                    }
+                    // Password does not match, return credentialStatus = 2
+                    // Denotes incorrect password
+                    cn.close();
+                    return 2;
+                }
+                else {
+                    // If user is not a match return credentialStatus = 1
+                    // Denotes a new user
+                    cn.close();
+                    return 1;
+                }
             } catch (Exception e) {
                 Log.println(Log.DEBUG, TAG, e.toString());
                 Log.println(Log.DEBUG, TAG, String.valueOf(e.getCause()));
-            }
-            // If user is not a match return credentialStatus = 1
-            // Denotes a new user
-            if(!userMatch) {return 1;}
-            // If user is a match, check for a matching password
-            else if (userMatch) {
-
             }
             return 0;
         }
 
         @Override
         protected void onPostExecute(Integer credentialStatus) {
-
+            // Return the credential status to the UI Thread
             super.onPostExecute(credentialStatus);
         }
     }
 
-    private class addUserTask extends AsyncTask<Void, Void, Void> {
+    private class AddUserTask extends AsyncTask<Void, Void, Void> {
 
         @Override
         protected Void doInBackground(Void... voids) {
             Connection cn;
             try {
+                // Hash the users password
+                String hashedPassword = utils.hashPassword(user_password.getText().toString());
+                // Make connection
                 cn = utils.makeConnection();
-                Statement st = cn.createStatement();
                 // Insert the new user into the database
-                String query = "INSERT INTO User VALUES (" + username.getText().toString() + ", " + user_password.getText().toString() + ")";
-                st.executeQuery(query);
+                Log.println(Log.DEBUG, TAG, "HERE");
+                String query = " INSERT INTO User (user_name, password, fav_team)" +
+                        " VALUES (?, ?, ?)";
+                PreparedStatement ps = cn.prepareStatement(query);
+                ps.setString(1, username.getText().toString());
+                ps.setString(2, hashedPassword);
+                ps.setString(3, null);
+                ps.execute();
                 // Close connection
                 cn.close();
-                st.close();
             } catch (Exception e) {
                 Log.println(Log.DEBUG, TAG, e.toString());
                 Log.println(Log.DEBUG, TAG, String.valueOf(e.getCause()));

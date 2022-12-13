@@ -1,13 +1,19 @@
 package com.example.cpsc321_finalproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Spinner;
 
+import androidx.core.view.MenuItemCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -20,14 +26,30 @@ public class HomeActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private ActivityHomeBinding binding;
 
+    // Load the setting menu icon into the toolbar and set the onClick event
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_home, menu);
+        MenuItem item = menu.findItem(R.id.menu_settings);
+        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(@NonNull MenuItem item) {
+                Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                return false;
+            }
+        });
+        return true;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        setSupportActionBar(binding.homeToolbar);
 
-        setSupportActionBar(binding.toolbar);
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();

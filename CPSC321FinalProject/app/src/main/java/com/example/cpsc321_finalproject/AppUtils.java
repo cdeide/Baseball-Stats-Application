@@ -39,6 +39,11 @@ public class AppUtils {
         return false;
     }
 
+    public String hashPassword(String password) {
+        String hashedPassword = String.valueOf(password.hashCode());
+        return hashedPassword;
+    }
+
     public Connection makeConnection() throws SQLException {
         Connection cn = DriverManager.getConnection(url, db_user, db_password);
         return cn;

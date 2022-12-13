@@ -20,11 +20,11 @@ public final class ActivityHomeBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final Toolbar toolbar;
+  public final Toolbar homeToolbar;
 
-  private ActivityHomeBinding(@NonNull CoordinatorLayout rootView, @NonNull Toolbar toolbar) {
+  private ActivityHomeBinding(@NonNull CoordinatorLayout rootView, @NonNull Toolbar homeToolbar) {
     this.rootView = rootView;
-    this.toolbar = toolbar;
+    this.homeToolbar = homeToolbar;
   }
 
   @Override
@@ -54,13 +54,13 @@ public final class ActivityHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.toolbar;
-      Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
-      if (toolbar == null) {
+      id = R.id.home_toolbar;
+      Toolbar homeToolbar = ViewBindings.findChildViewById(rootView, id);
+      if (homeToolbar == null) {
         break missingId;
       }
 
-      return new ActivityHomeBinding((CoordinatorLayout) rootView, toolbar);
+      return new ActivityHomeBinding((CoordinatorLayout) rootView, homeToolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
