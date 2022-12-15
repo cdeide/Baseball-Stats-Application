@@ -27,7 +27,7 @@ public class PickTeamActivity extends AppCompatActivity {
 
     AppUtils utils = new AppUtils();
 
-    String[] userString = null;
+    String username = null;
     Spinner teamSpinner = null;
     Button goButton = null;
 
@@ -37,8 +37,7 @@ public class PickTeamActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pick_team);
 
         // Get data from intent
-        String username = getIntent().getStringExtra("username");
-        userString = new String[]{username};
+        username = getIntent().getStringExtra("username");
 
         // Load logo image from drawables folder
         ImageView appLogo = findViewById(R.id.logoImage);
@@ -65,10 +64,10 @@ public class PickTeamActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Get the team selected in the spinner
-                String team = (String) teamSpinner.getSelectedItem();
+                String[] team_name = {(String) teamSpinner.getSelectedItem()};
                 // Insert into DB
                 UpdateTeamTask updateTeam = new UpdateTeamTask();
-                updateTeam.execute(userString);
+                updateTeam.execute(team_name);
                 // Launch the HomeActivity
                 Intent intent = new Intent(PickTeamActivity.this, HomeActivity.class);
                 startActivity(intent);
