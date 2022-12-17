@@ -1,34 +1,28 @@
 package com.example.cpsc321_finalproject;
 
-import android.content.Intent;
-import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Spinner;
-
-import androidx.core.view.MenuItemCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.cpsc321_finalproject.databinding.ActivityHomeBinding;
+import android.widget.Button;
+import android.widget.ImageView;
+import androidx.appcompat.widget.Toolbar;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityHomeBinding binding;
-
     String username;
 
-    // Load the setting menu icon into the toolbar and set the onClick event
+    ImageView appLogo = null;
+    Button playerSearchButton = null;
+    Button teamRosterButton = null;
+    Button teamHistoryButton = null;
+    Button otherTeamsButton = null;
+
+    // Load the settings menu icon into the toolbar and set the onClick event
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_home, menu);
@@ -48,22 +42,37 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
 
+        // Set up the toolbar
+        Toolbar toolbar = findViewById(R.id.home_toolbar);
+        setSupportActionBar(toolbar);
+
+        // Get username from the intent
         username = getIntent().getStringExtra("username");
 
-        binding = ActivityHomeBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        setSupportActionBar(binding.homeToolbar);
+        // Load the app logo
+        appLogo = findViewById(R.id.home_logoImage);
+        appLogo.setImageResource(R.drawable.app_logo);
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-    }
+        // Get buttons
+        playerSearchButton = findViewById(R.id.player_search_button);
+        teamRosterButton = findViewById(R.id.team_roster_button);
+        teamHistoryButton = findViewById(R.id.team_history_button);
+        otherTeamsButton = findViewById(R.id.other_teams_button);
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+        // Set the playerSearchButton onCLick
+        playerSearchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Launch the PlayerSearchActivity
+                Intent intent = new Intent(HomeActivity.this, PlayerSearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Set the teamRosterButton onClick
+        // Set the teamHistoryButton onClick
+        // Set the otherTeamsButton onClick
     }
 }

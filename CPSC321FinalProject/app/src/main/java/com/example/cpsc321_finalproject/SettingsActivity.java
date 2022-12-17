@@ -44,6 +44,19 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        // Set up the toolbar
+        Toolbar toolbar = findViewById(R.id.setting_toolbar);
+        setSupportActionBar(toolbar);
+        // Set up back button
+        toolbar.setNavigationIcon(R.drawable.ic__arrow_back_24);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Close the current activity
+                finish();
+            }
+        });
+
         // Get data from intent
         username = getIntent().getStringExtra("username");
 
@@ -125,18 +138,6 @@ public class SettingsActivity extends AppCompatActivity {
                             .setNegativeButton("Cancel", null);
                     dialogBuilder.show();
                 }
-            }
-        });
-
-        Toolbar toolbar = findViewById(R.id.setting_toolbar);
-        setSupportActionBar(toolbar);
-        // Set up back button
-        toolbar.setNavigationIcon(R.drawable.ic__arrow_back_24);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Close the current activity
-                finish();
             }
         });
     }

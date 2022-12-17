@@ -4,32 +4,62 @@ package com.example.cpsc321_finalproject.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.cpsc321_finalproject.R;
+import com.google.android.material.appbar.AppBarLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityHomeBinding implements ViewBinding {
   @NonNull
-  private final CoordinatorLayout rootView;
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final AppBarLayout homeAppbar;
+
+  @NonNull
+  public final ImageView homeLogoImage;
 
   @NonNull
   public final Toolbar homeToolbar;
 
-  private ActivityHomeBinding(@NonNull CoordinatorLayout rootView, @NonNull Toolbar homeToolbar) {
+  @NonNull
+  public final Button otherTeamsButton;
+
+  @NonNull
+  public final Button playerSearchButton;
+
+  @NonNull
+  public final Button teamHistoryButton;
+
+  @NonNull
+  public final Button teamRosterButton;
+
+  private ActivityHomeBinding(@NonNull ConstraintLayout rootView, @NonNull AppBarLayout homeAppbar,
+      @NonNull ImageView homeLogoImage, @NonNull Toolbar homeToolbar,
+      @NonNull Button otherTeamsButton, @NonNull Button playerSearchButton,
+      @NonNull Button teamHistoryButton, @NonNull Button teamRosterButton) {
     this.rootView = rootView;
+    this.homeAppbar = homeAppbar;
+    this.homeLogoImage = homeLogoImage;
     this.homeToolbar = homeToolbar;
+    this.otherTeamsButton = otherTeamsButton;
+    this.playerSearchButton = playerSearchButton;
+    this.teamHistoryButton = teamHistoryButton;
+    this.teamRosterButton = teamRosterButton;
   }
 
   @Override
   @NonNull
-  public CoordinatorLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -54,13 +84,50 @@ public final class ActivityHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.home_appbar;
+      AppBarLayout homeAppbar = ViewBindings.findChildViewById(rootView, id);
+      if (homeAppbar == null) {
+        break missingId;
+      }
+
+      id = R.id.home_logoImage;
+      ImageView homeLogoImage = ViewBindings.findChildViewById(rootView, id);
+      if (homeLogoImage == null) {
+        break missingId;
+      }
+
       id = R.id.home_toolbar;
       Toolbar homeToolbar = ViewBindings.findChildViewById(rootView, id);
       if (homeToolbar == null) {
         break missingId;
       }
 
-      return new ActivityHomeBinding((CoordinatorLayout) rootView, homeToolbar);
+      id = R.id.other_teams_button;
+      Button otherTeamsButton = ViewBindings.findChildViewById(rootView, id);
+      if (otherTeamsButton == null) {
+        break missingId;
+      }
+
+      id = R.id.player_search_button;
+      Button playerSearchButton = ViewBindings.findChildViewById(rootView, id);
+      if (playerSearchButton == null) {
+        break missingId;
+      }
+
+      id = R.id.team_history_button;
+      Button teamHistoryButton = ViewBindings.findChildViewById(rootView, id);
+      if (teamHistoryButton == null) {
+        break missingId;
+      }
+
+      id = R.id.team_roster_button;
+      Button teamRosterButton = ViewBindings.findChildViewById(rootView, id);
+      if (teamRosterButton == null) {
+        break missingId;
+      }
+
+      return new ActivityHomeBinding((ConstraintLayout) rootView, homeAppbar, homeLogoImage,
+          homeToolbar, otherTeamsButton, playerSearchButton, teamHistoryButton, teamRosterButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

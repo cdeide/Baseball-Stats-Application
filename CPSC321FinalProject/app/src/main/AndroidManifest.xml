@@ -15,6 +15,14 @@
         android:theme="@style/Theme.CPSC321FinalProject"
         tools:targetApi="31">
         <activity
+            android:name=".PlayerSearchActivity"
+            android:label="Player Search"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".PickTeamActivity"
             android:exported="false">
             <meta-data
@@ -33,7 +41,7 @@
         <activity
             android:name=".HomeActivity"
             android:exported="false"
-            android:label="@string/title_activity_home"
+            android:label="Home"
             android:theme="@style/Theme.CPSC321FinalProject.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"

@@ -29,6 +29,7 @@
     <string name="change_pass_button">Change Password</string>
     <string name="choose_team_message">Please choose your favorite team from the drop down menu below (The team you would like to follow most closely)</string>
     <string name="cur_pass_string">Current Password:</string>
+    <string name="fav_team_roster_button">MyTeam Roster</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
@@ -37,12 +38,17 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="login_failed">"Login failed"</string>
     <string name="login_string">LOGIN/REGISTER</string>
+    <string name="max_text">MAX:</string>
     <string name="message_text">Welcome!\n\nEnter your username and password to login or register</string>
     <string name="messages_header">Messages</string>
+    <string name="min_text">MIN:</string>
     <string name="new_pass_string">New Password:</string>
     <string name="next">Next</string>
     <string name="options_menu">Options Menu</string>
+    <string name="other_teams_button">Other Teams</string>
     <string name="password_text">Password:</string>
+    <string name="player_search_button">Player Search</string>
+    <string name="player_search_message">Press the button in the bottom right to add a search filter</string>
     <string name="previous">Previous</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -55,6 +61,7 @@
     <string name="sync_header">Sync</string>
     <string name="sync_title">Sync email periodically</string>
     <string name="team_button_string">GO!</string>
+    <string name="team_history_button">MyTeam History</string>
     <string name="team_spinner_prompt">Favorite Team</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_login">LoginActivity</string>

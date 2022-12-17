@@ -51,4 +51,12 @@
     <string name="cur_pass_string">Current Password:</string>
     <string name="new_pass_string">New Password:</string>
     <string name="change_pass_button">Change Password</string>
+    <string name="player_search_button">Player Search</string>
+    <string name="fav_team_roster_button">MyTeam Roster</string>
+    <string name="other_teams_button">Other Teams</string>
+    <string name="team_history_button">MyTeam History</string>
+    <string name="min_text">MIN:</string>
+    <string name="max_text">MAX:</string>
+    <string name="player_search_message">Press the button in the bottom right to add a search filter</string>
+    <string name="search_button">Search</string>
 </resources>

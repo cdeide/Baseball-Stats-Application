@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,20 +8,80 @@
     tools:context=".HomeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/home_appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.CPSC321FinalProject.AppBarOverlay">
+        android:theme="@style/Theme.CPSC321FinalProject.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/home_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/teal_700"
-            app:title="Home"
-            app:popupTheme="@style/Theme.CPSC321FinalProject.PopupOverlay" />
+            app:popupTheme="@style/Theme.CPSC321FinalProject.PopupOverlay"
+            app:title="Home" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_home"/>
+    <ImageView
+        android:id="@+id/home_logoImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/player_search_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Button
+        android:id="@+id/player_search_button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/player_search_button"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@id/team_roster_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_logoImage" />
+    <Button
+        android:id="@+id/team_roster_button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/fav_team_roster_button"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@id/team_history_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player_search_button" />
+
+    <Button
+        android:id="@+id/team_history_button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/team_history_button"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@id/other_teams_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team_roster_button" />
+
+    <Button
+        android:id="@+id/other_teams_button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="@string/other_teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team_history_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

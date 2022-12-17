@@ -4,14 +4,6 @@
         "source": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-main-43:\\layout\\fragment_second.xml"
     },
     {
-        "merged": "com.example.cpsc321_finalproject.app-mergeDebugResources-40:/layout/activity_settings.xml",
-        "source": "com.example.cpsc321_finalproject.app-main-43:/layout/activity_settings.xml"
-    },
-    {
-        "merged": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-mergeDebugResources-40:\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-main-43:\\layout\\fragment_home.xml"
-    },
-    {
         "merged": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-mergeDebugResources-40:\\layout\\activity_settings.xml",
         "source": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-main-43:\\layout\\activity_settings.xml"
     },
@@ -24,6 +16,26 @@
         "source": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-main-43:\\layout\\content_home.xml"
     },
     {
+        "merged": "com.example.cpsc321_finalproject.app-mergeDebugResources-40:/layout/activity_player_search.xml",
+        "source": "com.example.cpsc321_finalproject.app-main-43:/layout/activity_player_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-mergeDebugResources-40:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-main-43:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-mergeDebugResources-40:\\layout\\activity_player_search.xml",
+        "source": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-main-43:\\layout\\activity_player_search.xml"
+    },
+    {
+        "merged": "com.example.cpsc321_finalproject.app-mergeDebugResources-40:/layout/content_player_search.xml",
+        "source": "com.example.cpsc321_finalproject.app-main-43:/layout/content_player_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-mergeDebugResources-40:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-main-43:\\layout\\fragment_home.xml"
+    },
+    {
         "merged": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-mergeDebugResources-40:\\layout\\activity_pick_team.xml",
         "source": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-main-43:\\layout\\activity_pick_team.xml"
     },
@@ -32,7 +44,7 @@
         "source": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-main-43:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-mergeDebugResources-40:\\layout\\activity_home.xml",
-        "source": "C:\\Users\\Connor Deide\\.gradle\\daemon\\7.4\\com.example.cpsc321_finalproject.app-main-43:\\layout\\activity_home.xml"
+        "merged": "com.example.cpsc321_finalproject.app-mergeDebugResources-40:/layout/search_view_item.xml",
+        "source": "com.example.cpsc321_finalproject.app-main-43:/layout/search_view_item.xml"
     }
 ]
