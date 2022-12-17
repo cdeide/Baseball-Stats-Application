@@ -4,6 +4,7 @@ array reply_entries
 array reply_values
 color black
 color grey_back
+color light_gray
 color purple_200
 color purple_500
 color purple_700
@@ -27,8 +28,13 @@ id action_HomeFragment_to_SecondFragment
 id action_SecondFragment_to_HomeFragment
 id button_first
 id button_second
+id change_pass_button
+id change_team_button
+id cur_password_input
+id cur_password_text
 id go_button
 id home_toolbar
+id include
 id login_button
 id logoImage
 id menu_home
@@ -36,9 +42,13 @@ id menu_settings
 id message_user
 id nav_graph
 id nav_host_fragment_content_home
+id new_password_input
+id new_password_text
 id password_input
 id password_text
 id setting_toolbar
+id settings_appbar
+id settings_message
 id team_spinner
 id textview_second
 id username_input
@@ -62,7 +72,9 @@ string app_name
 string attachment_summary_off
 string attachment_summary_on
 string attachment_title
+string change_pass_button
 string choose_team_message
+string cur_pass_string
 string first_fragment_label
 string hello_first_fragment
 string hello_second_fragment
@@ -73,6 +85,7 @@ string login_failed
 string login_string
 string message_text
 string messages_header
+string new_pass_string
 string next
 string options_menu
 string password_text
@@ -82,6 +95,8 @@ string prompt_password
 string reply_title
 string second_fragment_label
 string settings
+string settings_change_team_button
+string settings_message
 string signature_title
 string sync_header
 string sync_title

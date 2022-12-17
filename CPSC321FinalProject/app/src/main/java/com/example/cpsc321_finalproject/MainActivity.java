@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                     if(credentialStatus == 0) {
                         // Credentials are a match, launch the HomeActivity
                         intent = new Intent(MainActivity.this, HomeActivity.class);
+                        intent.putExtra("username", username.getText().toString());
                         startActivity(intent);
                     }
                     else if(credentialStatus == 1) {
@@ -105,11 +106,11 @@ public class MainActivity extends AppCompatActivity {
                                         try {
                                             addUser.execute();
                                             // If user is successfully added, launch the PickTeamActivity
-                                            Intent intent = new Intent(MainActivity.this, PickTeamActivity.class);
+                                            intent = new Intent(MainActivity.this, PickTeamActivity.class);
                                             intent.putExtra("username", username.getText().toString());
                                             startActivity(intent);
                                         } catch (Exception e) {
-                                            message_user.setTextColor(getResources().getColor(R.color.red));
+                                             message_user.setTextColor(getResources().getColor(R.color.red));
                                             message_user.setTypeface(null, Typeface.BOLD);
                                             message_user.setTextSize(18);
                                             message_user.setText("There was a problem connecting to the Database");
@@ -163,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.println(Log.DEBUG, TAG, query);
                     rs = st.executeQuery(query);
                     while(rs.next()) {
-                        if (utils.hashPassword(user_password.getText().toString()).equals(rs.getString("password"))) {
+                        if(utils.hashPassword(user_password.getText().toString()).equals(rs.getString("password"))) {
                             // Matching password, return credentialStatus = 0
                             // Denotes valid credentials
                             cn.close();
@@ -207,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
                 cn = utils.makeConnection();
                 // Insert the new user into the database
                 Log.println(Log.DEBUG, TAG, "HERE");
-                String query = " INSERT INTO User (user_name, password, fav_team)" +
+                String query = "INSERT INTO User (user_name, password, fav_team)" +
                         " VALUES (?, ?, ?)";
                 PreparedStatement ps = cn.prepareStatement(query);
                 ps.setString(1, username.getText().toString());

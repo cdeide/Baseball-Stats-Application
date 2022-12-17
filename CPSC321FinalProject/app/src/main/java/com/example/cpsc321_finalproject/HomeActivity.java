@@ -26,6 +26,8 @@ public class HomeActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private ActivityHomeBinding binding;
 
+    String username;
+
     // Load the setting menu icon into the toolbar and set the onClick event
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -35,6 +37,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(@NonNull MenuItem item) {
                 Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                intent.putExtra("username", username);
                 startActivity(intent);
                 return false;
             }
@@ -46,10 +49,11 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        username = getIntent().getStringExtra("username");
+
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.homeToolbar);
-
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();

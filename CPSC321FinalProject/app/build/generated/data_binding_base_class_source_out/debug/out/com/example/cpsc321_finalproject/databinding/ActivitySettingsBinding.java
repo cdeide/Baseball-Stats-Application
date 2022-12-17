@@ -4,33 +4,77 @@ package com.example.cpsc321_finalproject.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.cpsc321_finalproject.R;
+import com.google.android.material.appbar.AppBarLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivitySettingsBinding implements ViewBinding {
   @NonNull
-  private final CoordinatorLayout rootView;
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final Button changePassButton;
+
+  @NonNull
+  public final Button changeTeamButton;
+
+  @NonNull
+  public final EditText curPasswordInput;
+
+  @NonNull
+  public final TextView curPasswordText;
+
+  @NonNull
+  public final ContentSettingsBinding include;
+
+  @NonNull
+  public final EditText newPasswordInput;
+
+  @NonNull
+  public final TextView newPasswordText;
 
   @NonNull
   public final Toolbar settingToolbar;
 
-  private ActivitySettingsBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull Toolbar settingToolbar) {
+  @NonNull
+  public final AppBarLayout settingsAppbar;
+
+  @NonNull
+  public final TextView settingsMessage;
+
+  private ActivitySettingsBinding(@NonNull ConstraintLayout rootView,
+      @NonNull Button changePassButton, @NonNull Button changeTeamButton,
+      @NonNull EditText curPasswordInput, @NonNull TextView curPasswordText,
+      @NonNull ContentSettingsBinding include, @NonNull EditText newPasswordInput,
+      @NonNull TextView newPasswordText, @NonNull Toolbar settingToolbar,
+      @NonNull AppBarLayout settingsAppbar, @NonNull TextView settingsMessage) {
     this.rootView = rootView;
+    this.changePassButton = changePassButton;
+    this.changeTeamButton = changeTeamButton;
+    this.curPasswordInput = curPasswordInput;
+    this.curPasswordText = curPasswordText;
+    this.include = include;
+    this.newPasswordInput = newPasswordInput;
+    this.newPasswordText = newPasswordText;
     this.settingToolbar = settingToolbar;
+    this.settingsAppbar = settingsAppbar;
+    this.settingsMessage = settingsMessage;
   }
 
   @Override
   @NonNull
-  public CoordinatorLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -55,13 +99,70 @@ public final class ActivitySettingsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.change_pass_button;
+      Button changePassButton = ViewBindings.findChildViewById(rootView, id);
+      if (changePassButton == null) {
+        break missingId;
+      }
+
+      id = R.id.change_team_button;
+      Button changeTeamButton = ViewBindings.findChildViewById(rootView, id);
+      if (changeTeamButton == null) {
+        break missingId;
+      }
+
+      id = R.id.cur_password_input;
+      EditText curPasswordInput = ViewBindings.findChildViewById(rootView, id);
+      if (curPasswordInput == null) {
+        break missingId;
+      }
+
+      id = R.id.cur_password_text;
+      TextView curPasswordText = ViewBindings.findChildViewById(rootView, id);
+      if (curPasswordText == null) {
+        break missingId;
+      }
+
+      id = R.id.include;
+      View include = ViewBindings.findChildViewById(rootView, id);
+      if (include == null) {
+        break missingId;
+      }
+      ContentSettingsBinding binding_include = ContentSettingsBinding.bind(include);
+
+      id = R.id.new_password_input;
+      EditText newPasswordInput = ViewBindings.findChildViewById(rootView, id);
+      if (newPasswordInput == null) {
+        break missingId;
+      }
+
+      id = R.id.new_password_text;
+      TextView newPasswordText = ViewBindings.findChildViewById(rootView, id);
+      if (newPasswordText == null) {
+        break missingId;
+      }
+
       id = R.id.setting_toolbar;
       Toolbar settingToolbar = ViewBindings.findChildViewById(rootView, id);
       if (settingToolbar == null) {
         break missingId;
       }
 
-      return new ActivitySettingsBinding((CoordinatorLayout) rootView, settingToolbar);
+      id = R.id.settings_appbar;
+      AppBarLayout settingsAppbar = ViewBindings.findChildViewById(rootView, id);
+      if (settingsAppbar == null) {
+        break missingId;
+      }
+
+      id = R.id.settings_message;
+      TextView settingsMessage = ViewBindings.findChildViewById(rootView, id);
+      if (settingsMessage == null) {
+        break missingId;
+      }
+
+      return new ActivitySettingsBinding((ConstraintLayout) rootView, changePassButton,
+          changeTeamButton, curPasswordInput, curPasswordText, binding_include, newPasswordInput,
+          newPasswordText, settingToolbar, settingsAppbar, settingsMessage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

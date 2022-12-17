@@ -46,4 +46,9 @@
     <string name="team_spinner_prompt">Favorite Team</string>
     <string name="choose_team_message">Please choose your favorite team from the drop down menu below (The team you would like to follow most closely)</string>
     <string name="team_button_string">GO!</string>
+    <string name="settings_message">Here you can change your favorite team selection or your password</string>
+    <string name="settings_change_team_button">Change Favorite Team</string>
+    <string name="cur_pass_string">Current Password:</string>
+    <string name="new_pass_string">New Password:</string>
+    <string name="change_pass_button">Change Password</string>
 </resources>
