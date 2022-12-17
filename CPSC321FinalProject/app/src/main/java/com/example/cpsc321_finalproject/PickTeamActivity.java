@@ -118,7 +118,6 @@ public class PickTeamActivity extends AppCompatActivity {
                 String query = "UPDATE User SET fav_team=? WHERE user_name='" + username + "'";
                 PreparedStatement ps = cn.prepareStatement(query);
                 ps.setString(1, team_name[0]);
-                Log.println(Log.DEBUG, TAG, query);
                 ps.execute();
                 // Close connection
                 cn.close();

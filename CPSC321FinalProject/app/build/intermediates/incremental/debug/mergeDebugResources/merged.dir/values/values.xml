@@ -1890,6 +1890,7 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="reply_title">Default reply action</string>
+    <string name="search_button">Search</string>
     <string name="search_menu_title">Search</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="settings">Settings</string>

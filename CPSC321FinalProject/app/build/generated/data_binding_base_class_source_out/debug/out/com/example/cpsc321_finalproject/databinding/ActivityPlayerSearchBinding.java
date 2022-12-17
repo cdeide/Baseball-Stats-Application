@@ -4,6 +4,7 @@ package com.example.cpsc321_finalproject.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -22,6 +23,9 @@ public final class ActivityPlayerSearchBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ContentPlayerSearchBinding include2;
+
+  @NonNull
   public final FloatingActionButton playerSearchActionButton;
 
   @NonNull
@@ -30,13 +34,20 @@ public final class ActivityPlayerSearchBinding implements ViewBinding {
   @NonNull
   public final Toolbar playersearchToolbar;
 
+  @NonNull
+  public final Button searchButton;
+
   private ActivityPlayerSearchBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ContentPlayerSearchBinding include2,
       @NonNull FloatingActionButton playerSearchActionButton,
-      @NonNull AppBarLayout playersearchAppbar, @NonNull Toolbar playersearchToolbar) {
+      @NonNull AppBarLayout playersearchAppbar, @NonNull Toolbar playersearchToolbar,
+      @NonNull Button searchButton) {
     this.rootView = rootView;
+    this.include2 = include2;
     this.playerSearchActionButton = playerSearchActionButton;
     this.playersearchAppbar = playersearchAppbar;
     this.playersearchToolbar = playersearchToolbar;
+    this.searchButton = searchButton;
   }
 
   @Override
@@ -66,6 +77,13 @@ public final class ActivityPlayerSearchBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.include2;
+      View include2 = ViewBindings.findChildViewById(rootView, id);
+      if (include2 == null) {
+        break missingId;
+      }
+      ContentPlayerSearchBinding binding_include2 = ContentPlayerSearchBinding.bind(include2);
+
       id = R.id.player_search_action_button;
       FloatingActionButton playerSearchActionButton = ViewBindings.findChildViewById(rootView, id);
       if (playerSearchActionButton == null) {
@@ -84,8 +102,14 @@ public final class ActivityPlayerSearchBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPlayerSearchBinding((ConstraintLayout) rootView, playerSearchActionButton,
-          playersearchAppbar, playersearchToolbar);
+      id = R.id.search_button;
+      Button searchButton = ViewBindings.findChildViewById(rootView, id);
+      if (searchButton == null) {
+        break missingId;
+      }
+
+      return new ActivityPlayerSearchBinding((ConstraintLayout) rootView, binding_include2,
+          playerSearchActionButton, playersearchAppbar, playersearchToolbar, searchButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -33,9 +33,10 @@ id home_appbar
 id home_logoImage
 id home_toolbar
 id include
-id item_max_spinner
+id include2
+id item_max_input
 id item_max_text
-id item_min_spinner
+id item_min_input
 id item_min_text
 id login_button
 id logoImage
@@ -51,6 +52,7 @@ id player_search_action_button
 id player_search_button
 id playersearch_appbar
 id playersearch_toolbar
+id search_button
 id search_item
 id search_item_title
 id search_recycler_view
@@ -108,6 +110,7 @@ string previous
 string prompt_email
 string prompt_password
 string reply_title
+string search_button
 string second_fragment_label
 string settings
 string settings_change_team_button

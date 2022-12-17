@@ -2996,15 +2996,16 @@ int id ignoreRequest 0x7f0900e2
 int id image 0x7f0900e3
 int id immediateStop 0x7f0900e4
 int id include 0x7f0900e5
+int id include2 0x7f090215
 int id included 0x7f0900e6
 int id indeterminate 0x7f0900e7
 int id info 0x7f0900e8
 int id invisible 0x7f0900e9
 int id inward 0x7f0900ea
 int id italic 0x7f0900eb
-int id item_max_spinner 0x7f09020d
+int id item_max_input 0x7f090216
 int id item_max_text 0x7f09020e
-int id item_min_spinner 0x7f09020f
+int id item_min_input 0x7f090217
 int id item_min_text 0x7f090210
 int id item_touch_helper_previous_elevation 0x7f0900ec
 int id jumpToEnd 0x7f0900ed
@@ -3706,6 +3707,7 @@ int string previous 0x7f1100ab
 int string prompt_email 0x7f1100ac
 int string prompt_password 0x7f1100ad
 int string reply_title 0x7f1100ae
+int string search_button 0x7f1100c8
 int string search_menu_title 0x7f1100af
 int string second_fragment_label 0x7f1100b0
 int string settings 0x7f1100b1

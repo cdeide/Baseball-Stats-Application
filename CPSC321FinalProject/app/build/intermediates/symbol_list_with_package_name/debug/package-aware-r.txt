@@ -2997,15 +2997,16 @@ id ignoreRequest
 id image
 id immediateStop
 id include
+id include2
 id included
 id indeterminate
 id info
 id invisible
 id inward
 id italic
-id item_max_spinner
+id item_max_input
 id item_max_text
-id item_min_spinner
+id item_min_input
 id item_min_text
 id item_touch_helper_previous_elevation
 id jumpToEnd
@@ -3707,6 +3708,7 @@ string previous
 string prompt_email
 string prompt_password
 string reply_title
+string search_button
 string search_menu_title
 string second_fragment_label
 string settings

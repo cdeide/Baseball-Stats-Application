@@ -159,13 +159,9 @@ public class SettingsActivity extends AppCompatActivity {
                 cn = utils.makeConnection();
                 st = cn.createStatement();
                 query = "SELECT password FROM User WHERE user_name='" + username + "'";
-                Log.println(Log.DEBUG, TAG, query);
                 rs = st.executeQuery(query);
-                Log.println(Log.DEBUG, TAG, "rs: " + rs.toString());
                 Boolean goodPassword = false;
                 while(rs.next()) {
-                    Log.println(Log.DEBUG, TAG, strCurPassword.toString());
-                    Log.println(Log.DEBUG, TAG, rs.getString("password"));
                     if(strCurPassword.equals(rs.getString("password"))) {
                         goodPassword = true;
                     }
@@ -176,7 +172,6 @@ public class SettingsActivity extends AppCompatActivity {
                     query = "UPDATE User SET password=? WHERE user_name='" + username + "'";
                     PreparedStatement ps = cn.prepareStatement(query);
                     ps.setString(1, strNewPassword);
-                    Log.println(Log.DEBUG, TAG, query);
                     ps.execute();
                     // Close connection
                     cn.close();

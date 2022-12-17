@@ -22,13 +22,13 @@ public final class SearchViewItemBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
-  public final EditText itemMaxSpinner;
+  public final EditText itemMaxInput;
 
   @NonNull
   public final TextView itemMaxText;
 
   @NonNull
-  public final EditText itemMinSpinner;
+  public final EditText itemMinInput;
 
   @NonNull
   public final TextView itemMinText;
@@ -42,14 +42,14 @@ public final class SearchViewItemBinding implements ViewBinding {
   @NonNull
   public final CardView searchViewItem;
 
-  private SearchViewItemBinding(@NonNull CardView rootView, @NonNull EditText itemMaxSpinner,
-      @NonNull TextView itemMaxText, @NonNull EditText itemMinSpinner,
-      @NonNull TextView itemMinText, @NonNull ConstraintLayout searchItem,
-      @NonNull TextView searchItemTitle, @NonNull CardView searchViewItem) {
+  private SearchViewItemBinding(@NonNull CardView rootView, @NonNull EditText itemMaxInput,
+      @NonNull TextView itemMaxText, @NonNull EditText itemMinInput, @NonNull TextView itemMinText,
+      @NonNull ConstraintLayout searchItem, @NonNull TextView searchItemTitle,
+      @NonNull CardView searchViewItem) {
     this.rootView = rootView;
-    this.itemMaxSpinner = itemMaxSpinner;
+    this.itemMaxInput = itemMaxInput;
     this.itemMaxText = itemMaxText;
-    this.itemMinSpinner = itemMinSpinner;
+    this.itemMinInput = itemMinInput;
     this.itemMinText = itemMinText;
     this.searchItem = searchItem;
     this.searchItemTitle = searchItemTitle;
@@ -83,9 +83,9 @@ public final class SearchViewItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.item_max_spinner;
-      EditText itemMaxSpinner = ViewBindings.findChildViewById(rootView, id);
-      if (itemMaxSpinner == null) {
+      id = R.id.item_max_input;
+      EditText itemMaxInput = ViewBindings.findChildViewById(rootView, id);
+      if (itemMaxInput == null) {
         break missingId;
       }
 
@@ -95,9 +95,9 @@ public final class SearchViewItemBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.item_min_spinner;
-      EditText itemMinSpinner = ViewBindings.findChildViewById(rootView, id);
-      if (itemMinSpinner == null) {
+      id = R.id.item_min_input;
+      EditText itemMinInput = ViewBindings.findChildViewById(rootView, id);
+      if (itemMinInput == null) {
         break missingId;
       }
 
@@ -121,8 +121,8 @@ public final class SearchViewItemBinding implements ViewBinding {
 
       CardView searchViewItem = (CardView) rootView;
 
-      return new SearchViewItemBinding((CardView) rootView, itemMaxSpinner, itemMaxText,
-          itemMinSpinner, itemMinText, searchItem, searchItemTitle, searchViewItem);
+      return new SearchViewItemBinding((CardView) rootView, itemMaxInput, itemMaxText, itemMinInput,
+          itemMinText, searchItem, searchItemTitle, searchViewItem);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

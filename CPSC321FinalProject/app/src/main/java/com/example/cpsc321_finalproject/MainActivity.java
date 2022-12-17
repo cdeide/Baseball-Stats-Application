@@ -55,10 +55,6 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view){
-//                //Temporary bypass
-//                Intent intent = new Intent(MainActivity.this, PickTeamActivity.class);
-//                startActivity(intent);
-
                 // Check for valid input fields
                 if(username.getText().toString().equals("") || user_password.getText().toString().equals("")) {
                     // An input is empty, send message to user
@@ -152,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
                 String query = "SELECT user_name FROM User";
                 ResultSet rs = st.executeQuery(query);
                 while(rs.next()) {
-                    Log.println(Log.DEBUG, TAG, rs.getString("user_name"));
                     if(username.getText().toString().equals(rs.getString("user_name"))) {
                         userMatch = true;
                         break;
@@ -161,7 +156,6 @@ public class MainActivity extends AppCompatActivity {
                 if(userMatch) {
                     // Check that input password matches password on file
                     query = "SELECT password FROM User WHERE user_name=" + "'" + username.getText().toString() + "'";
-                    Log.println(Log.DEBUG, TAG, query);
                     rs = st.executeQuery(query);
                     while(rs.next()) {
                         if(utils.hashPassword(user_password.getText().toString()).equals(rs.getString("password"))) {
@@ -207,7 +201,6 @@ public class MainActivity extends AppCompatActivity {
                 // Make connection
                 cn = utils.makeConnection();
                 // Insert the new user into the database
-                Log.println(Log.DEBUG, TAG, "HERE");
                 String query = "INSERT INTO User (user_name, password, fav_team)" +
                         " VALUES (?, ?, ?)";
                 PreparedStatement ps = cn.prepareStatement(query);
